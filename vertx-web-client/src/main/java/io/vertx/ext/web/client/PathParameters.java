@@ -1,5 +1,6 @@
 package io.vertx.ext.web.client;
 
+import io.vertx.codegen.annotations.GenIgnore;
 import io.vertx.codegen.annotations.VertxGen;
 import io.vertx.ext.web.client.impl.PathParametersImpl;
 
@@ -14,6 +15,7 @@ public interface PathParameters {
   /**
    * Like {@link PathParameters#param(String, String)}
    */
+  @GenIgnore
   default PathParameters param(String key, Object value) {
     return param(key, value.toString());
   }
